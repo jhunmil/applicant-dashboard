@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html.body{
+    @apply bg-slate-100;
+}
+
+
+
+
+
+/* manin navigation components */
+.cc-main-nav{
+    .cc-nav-items{
+        @apply flex;
+        .cc-nav-item{
+            @apply relative;
+            .cc-nav-link{
+               @apply relative flex block px-3 py-3;
+               i{
+                @apply inline-block text-2xl text-primaryblue;
+               }
+               .cc-notif-count{
+                @apply absolute left-[22px] flex items-center justify-center w-4 h-4 text-[10px] text-red-500 bg-white border border-red-500 rounded-full top-[10px];
+               }
+               &:hover{
+                    background-color: #eee;
+               }
+            }
+        }
+    }
+    .cc-dropdown-menu {
+        border-radius: 6px;
+        .cc-dropdown-wrapper{
+            .cc-dropdown-arrow{
+                position: absolute;
+                height: 10px;
+                overflow: hidden;
+                width: 40px;
+                top: -10px;
+                right:-10px;
+               overflow: visible;
+                .cc-arrow{
+                    @apply bg-accentblue;
+                    width: 15px;
+                    height: 15px;
+                    top: 3px;
+                    margin-top: 3px;
+                    left: auto;
+                  
+                    transform: rotate(45deg);
+                    display: block;
+                }
+            }
+            .drop-title{
+                @apply bg-accentblue;
+                overflow: hidden;
+                box-sizing: border-box;
+                border-radius: 6px 6px 0 0;
+            }
+        }
+    }
+}
+
+
+
+/* main sidebar */
+#cc-mainAside{
+    transition: all 0.5s ease-in-out;
+    z-index: 9;
+    box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
+    &.is-shrink{
+        width: 96px;
+        transition: all 0.5s ease-in-out;
+
+        
+        @media screen and (max-width:767px){
+            width: 0; 
+            overflow: hidden;
+        }
+
+        /* aside toggle */
+        #cc-mainAside-toggler{
+            transform: rotate(180deg);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .application-btn{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        /* active nav menu */
+        #sidebarnav{
+            .sidebar-item{
+                .hide-menu{
+                    opacity:0;
+             
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+        }
+    }
+
+
+    #cc-mainAside-toggler{
+        transform: rotate(0);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .application-btn{
+        white-space: nowrap;
+        min-width: 48px;
+        min-height: 48px;
+    }
+    #sidebarnav{
+        .sidebar-item{
+            &.active{
+                @apply bg-activegray;
+            }
+            .hide-menu{
+                opacity:1;
+                transition: all 0.3s ease-in-out;
+                transform: translateX(0);
+            }
+            
+        }
+       
+    }
+}
+
+
+/* main content */
+.main-content{
+    min-height: calc(100vh - 115px);
+    @media screen and (max-width:767px){
+        min-height: calc(100vh - 62px);
+    }
+}
+
+#cc-mainContent{
+    margin-left: 250px;
+    transition: all 0.5s ease-in-out;
+    &.is-shrink{
+        transition: all 0.5s ease-in-out;
+        margin-left: 96px;
+    }
+    @media screen and (max-width:767px){
+        margin-left: 218px;
+
+        &.is-shrink{
+            transition: all 0.5s ease-in-out;
+            margin-left: 0;
+        }
+    }
+}
+
+.aside-wrapper{
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.aside-wrapper::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+	background-color: #fff;
+}
+
+.aside-wrapper::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #fff;
+}
+
+.aside-wrapper::-webkit-scrollbar-thumb
+{
+	background-color: #ddd;
+}

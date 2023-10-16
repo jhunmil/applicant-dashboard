@@ -1,0 +1,13 @@
+.main-nav{
+    ul{
+        li{
+            a{
+                @apply text-blue-500;
+                i{
+                    @apply text-blue-500;
+                }
+            }
+        }
+    }
+}
+

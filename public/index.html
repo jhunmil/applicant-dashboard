@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/app.css" />
+    <link rel="stylesheet" href="./css/_components.css" />
+</head>
+
+<body class="overflow-x-hidden">
+    <div class="bg-gray-200 page-wrapper">
+
+        <aside class="fixed h-auto min-h-screen bg-white shrink-0 md:w-[250px] flex flex-col" id="cc-mainAside">
+            
+                <div class="py-4 logo-wrapper">
+                    <img src="./img/en-logo.svg" alt="" class="max-w-[160px] w-[84%] block mx-auto" />
+                </div>
+                <div class="relative aside-wrapper">
+                    <ul id="sidebarnav" class="grow">
+                        <li class="px-6 py-6 sidebar-item">
+                            <a href="#"
+                                class="flex items-center px-[11px] py-[10px] border rounded-md btn application-btn border-primaryblue hover:bg-activegray">
+                                <i class="text-[26px] las la-plus text-primaryblue"></i>
+                                <span class="inline-block text-sm hide-menu text-primaryblue ps-[7px]">New Application</span>
+                            </a>
+                        </li>
+        
+                        <li class="sidebar-item active">
+                            <a class="flex items-center px-8 py-3 sidebar-link text-primaryblue hover:bg-activegray" href=""
+                                aria-expanded="false">
+                                <i class="text-[26px] las la-copy"></i>
+                                <span class="inline-block text-sm hide-menu ps-[7px]">Applications</span>
+                            </a>
+                        </li>
+        
+                        <li class="sidebar-item">
+                            <a class="flex items-center px-8 py-3 sidebar-link text-primaryblue hover:bg-activegray" href="#"
+                                aria-expanded="false">
+                                <i class="text-[26px] las la-file-alt"></i>
+                                <span class="inline-block text-sm hide-menu ps-[7px]">Documents</span>
+                            </a>
+                        </li>
+        
+                        <li class="sidebar-item">
+                            <a class="flex items-center px-8 py-3 sidebar-link text-primaryblue hover:bg-activegray" href="#"
+                                aria-expanded="false">
+                                <i class="text-[26px] las la-sms"></i>
+                                <span class="inline-block text-sm hide-menu ps-[7px]">Messages</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="block absolute -right-[20px] top-1/2 -translate-y-1/2">
+                    <button id="cc-mainAside-toggler"
+                        class="relative flex items-center justify-center w-10 h-10 p-2 text-3xl bg-white border rounded-full cursor-pointer drop-shadow-md hover:drop-shadow-xl">
+                        <!-- &#9776; -->
+                        <i class="las la-angle-left text-primaryblue"></i>
+                    </button>
+                </div>
+           
+            
+        </aside>
+        <header id="cc-mainHeader" class="fixed top-0 left-0 w-full bg-white md:w-auto md:sticky">
+            <div class="flex items-center justify-between px-4">
+                <button id="cc-mainAside-mtoggler"
+                    class="relative flex items-center justify-center w-10 h-10 p-2 text-3xl cursor-pointer md:hidden">
+                    <i class="las la-bars text-primaryblue"></i>
+                </button>
+                <nav class="ms-auto cc-main-nav">
+                    <ul class="cc-nav-items">
+                        <li class="cc-nav-item">
+                            <a class="cc-nav-link" href="javascript:void(0)">
+                                <span class="cc-notif-count">3</span>
+                                <i class="las la-comment-alt"></i>
+                            </a>
+                            <div
+                                class="absolute right-0 hidden w-64 mt-1 origin-top-right bg-white cc-dropdown-menu">
+                                <div class="p-0 cc-dropdown-wrapper" role="menu" aria-orientation="vertical"
+                                    aria-labelledby="dropdown-button">
+                                    <div class="cc-dropdown-arrow">
+                                        <span class="cc-arrow"></span>
+                                    </div>
+                                    <div class="px-8 py-4 text-white drop-title">
+                                        <h4 class="m-b-0 m-t-5 font-[600] text-sm leading-[120%]">
+                                            4 New
+                                        </h4>
+                                        <span class="block text-xs font-light"> Messages </span>
+                                    </div>
+                                    <ul class="overflow-hidden">
+                                        <li class="border-b border-slate-100">
+                                            <a class="block px-8 py-3 text-sm text-gray-700 cursor-pointer hover:bg-gray-100 active:bg-blue-100"
+                                                role="menuitem">
+                                                <div class="mail-contnet">
+                                                    <h5 class="leading-[120%] message-title text-primaryBlue">
+                                                        CCG College
+                                                    </h5>
+                                                    <span
+                                                        class="text-[10px] uppercase time text-neutral-400 block">5
+                                                        min ago</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="block px-8 py-3 text-sm text-gray-700 cursor-pointer hover:bg-gray-100 active:bg-blue-100 rounded-[6px]"
+                                                role="menuitem">
+                                                <div class="mail-contnet">
+                                                    <h5 class="leading-[120%] message-title text-primaryBlue">
+                                                        CCG College
+                                                    </h5>
+                                                    <span
+                                                        class="text-[10px] uppercase time text-neutral-400 block">5
+                                                        min ago</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cc-nav-item">
+                            <a class="cc-nav-link" href="javascript:void(0)">
+                                <span class="cc-notif-count">3</span>
+                                <i class="las la-comment-alt"></i>
+                            </a>
+                            <div
+                                class="absolute right-0 hidden w-64 mt-1 origin-top-right bg-white cc-dropdown-menu">
+                                <div class="p-0 cc-dropdown-wrapper" role="menu" aria-orientation="vertical"
+                                    aria-labelledby="dropdown-button">
+                                    <div class="cc-dropdown-arrow">
+                                        <span class="cc-arrow"></span>
+                                    </div>
+                                    <div class="px-8 py-4 text-white drop-title">
+                                        <h4 class="m-b-0 m-t-5 font-[600] text-sm leading-[120%]">
+                                            2 New
+                                        </h4>
+                                        <span class="block text-xs font-light">
+                                            Notifications
+                                        </span>
+                                    </div>
+                                    <ul class="overflow-hidden">
+                                        <li class="border-b border-slate-100">
+                                            <a class="block px-8 py-3 text-sm text-gray-700 cursor-pointer hover:bg-gray-100 active:bg-blue-100"
+                                                role="menuitem">
+                                                <div class="mail-contnet">
+                                                    <h5 class="leading-[120%] message-title text-primaryBlue">
+                                                        Notification 01
+                                                    </h5>
+                                                    <span
+                                                        class="text-[10px] uppercase time text-neutral-400 block">20
+                                                        min ago</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="block px-8 py-3 text-sm text-gray-700 cursor-pointer hover:bg-gray-100 active:bg-blue-100 rounded-[6px]"
+                                                role="menuitem">
+                                                <div class="mail-contnet">
+                                                    <h5 class="leading-[120%] message-title text-primaryBlue">
+                                                        Notification 01
+                                                    </h5>
+                                                    <span
+                                                        class="text-[10px] uppercase time text-neutral-400 block">10
+                                                        min ago</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cc-nav-item">
+                            <a class="cc-nav-link" href="javascript:void(0)">
+                                <div class="flex items-center cc-avatar-wrapper">
+                                    <img src="./img/avatar.png" alt="" class="w-8 h-8 rounded-full" />
+                                    <span
+                                        class="inline-block pl-2 user-name ps-[5px] text-[11px] text-neutral-500">Applicant</span>
+                                </div>
+                            </a>
+                            <div
+                                class="absolute right-0 hidden mt-1 origin-top-right bg-white w-72 md:w-80 cc-dropdown-menu">
+                                <div class="p-0 cc-dropdown-wrapper" role="menu" aria-orientation="vertical"
+                                    aria-labelledby="dropdown-button">
+                                    <div class="cc-dropdown-arrow">
+                                        <span class="cc-arrow"></span>
+                                    </div>
+                                    <div class="px-4 py-4 text-white drop-title">
+                                        <div class="flex items center">
+                                            <img src="./img/avatar.png" alt="" class="w-8 h-8 rounded-full" />
+                                            <div class="ps-2">
+                                                <span class="block text-xs font-[600]">Jonh Patrick Henry</span>
+                                                <span
+                                                    class="block text-[10px]">John.patrick@higher-education-marketing.com</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="overflow-hidden">
+                                        <li class="border-b border-slate-100">
+                                            <a class="block px-5 py-3 text-sm text-gray-700 cursor-pointer hover:bg-gray-100 active:bg-blue-100"
+                                                role="menuitem">
+                                                <div class="flex items-center">
+                                                    <i class="text-[24px] las la-user-circle text-primaryblue"></i>
+                                                    <span class="block text-sm ps-2 text-primaryblue">My
+                                                        Profile</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="border-b border-slate-100">
+                                            <a class="block px-5 py-3 text-sm text-gray-700 cursor-pointer hover:bg-gray-100 active:bg-blue-100"
+                                                role="menuitem">
+                                                <div class="flex items-center">
+                                                    <i class="text-[24px] las la-copy text-primaryblue"></i>
+                                                    <span class="block text-sm ps-2 text-primaryblue">My
+                                                        Applications</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="border-b border-slate-100">
+                                            <a class="block px-5 py-3 text-sm text-gray-700 cursor-pointer hover:bg-gray-100 active:bg-blue-100"
+                                                role="menuitem">
+                                                <div class="flex items-center">
+                                                    <i class="text-[24px] las la-power-off text-red-400"></i>
+                                                    <span class="block text-sm text-red-400 ps-2">Logout</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main id="cc-mainContent" class="w-auto h-auto p-0 grow">
+            
+            <div class="h-full px-8 py-6 pt-20 md:pt-6 main-content bg-slate-100">
+                <div class="pb-2 border-b">
+                    <h1 class="flex items-center text-[1.35rem] page-title text-primaryblue-900">
+                        <i class="block text-3xl las la-copy text-accentblue me-2"></i>
+                        Applications
+                    </h1>
+                    <small class="text-xs tracking-wide text-primaryblue-900">Application List</small>
+                </div>
+                <div class="cc-application-list">
+                    <div class="cc-application-header">
+                        
+                    </div>
+                </div>
+            </div>
+            <footer class="text-center text-[11px] px-3 py-5 bg-slate-100 text-neutral-400">
+
+                2023 All Rights Reserved by <a href="http://www.higher-education-marketing.com" target="_blank" class="text-accentblue">Higher Education Marketing</a>.
+
+            </footer>
+        </main>
+    </div>
+    <script src="./js/components.js" type="text/javascript"></script>
+    <script src="./js/app.js" type="text/javascript"></script>
+</body>
+
+</html>

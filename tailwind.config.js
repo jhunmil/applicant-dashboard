@@ -9,10 +9,15 @@ module.exports = {
           DEFAULT:'#2B77A5',
         },
         accentblue:{
+          600:"#0094d1",
           DEFAULT:'#00A0DF',
         },
         activegray:{
-          DEFAULT:'#F3F5F7'
+          DEFAULT:'#F3F5F7',
+        },
+        linkpurple:{
+         
+          DEFAULT:'#7460EE'
         }
       },
       height: {
@@ -21,8 +26,6 @@ module.exports = {
       fontFamily: {
         'sans': ['Poppins', 'Arial', 'sans-serif'],
         'serif': ['ui-serif', 'Georgia']
-
-
       },
       screens: {
         'widescreen': { 'raw': '(min-aspect-ratio: 3/2)' },

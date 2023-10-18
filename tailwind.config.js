@@ -6,6 +6,7 @@ module.exports = {
       colors:{
         primaryblue:{
           900:"#0D3F60",
+          600:"#0094d1",
           DEFAULT:'#2B77A5',
         },
         accentblue:{

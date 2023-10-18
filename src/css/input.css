@@ -180,7 +180,30 @@ a{
             margin-left: 0;
         }
     }
+
 }
+
+/* page specifi 
+New application styles */
+
+#cc-mainContent{
+    &.cc-no-sidebar{
+        margin-left: 0 !important;
+    }
+    &.cc-no-header{
+        .main-content{
+            min-height: calc(100vh - 59px);
+        }
+        
+    }
+}
+
+
+
+
+
+
+
 
 
 

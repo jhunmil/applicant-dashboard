@@ -21,7 +21,7 @@
     <div class="bg-gray-200 page-wrapper">
         <div class="bg-gray-200 page-wrapper">
 
-            <aside class="fixed h-auto min-h-screen bg-white shrink-0 md:w-[250px] flex flex-col" id="cc-mainAside">
+            <aside class="fixed h-auto min-h-screen bg-white shrink-0 md:w-[250px] flex flex-col z-30" id="cc-mainAside">
 
                 <div class="py-4 logo-wrapper">
                     <img src="./img/en-logo.svg" alt="" class="max-w-[160px] w-[84%] block mx-auto" />
@@ -69,10 +69,12 @@
                         <i class="las la-angle-left text-primaryblue"></i>
                     </button>
                 </div>
-
+                
 
             </aside>
-            <header id="cc-mainHeader" class="fixed top-0 left-0 w-full bg-white md:w-auto md:sticky">
+            <div class="fixed z-10 hidden w-full h-screen aside-overlay"></div>
+
+            <header id="cc-mainHeader" class="fixed top-0 left-0 z-20 w-full bg-white md:w-auto md:sticky">
                 <div class="flex items-center justify-between px-4">
                     <button id="cc-mainAside-mtoggler"
                         class="relative flex items-center justify-center w-10 h-10 p-2 text-3xl cursor-pointer md:hidden">

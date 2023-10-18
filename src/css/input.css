@@ -72,7 +72,7 @@ a{
 /* main sidebar */
 #cc-mainAside{
     transition: all 0.5s ease-in-out;
-    z-index: 9;
+    
     box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
     @media screen and (max-width:767px){
         width: 250px; 
@@ -110,8 +110,23 @@ a{
                 }
             }
         }
+
+        /* activet overlay if shrik on mobile */
+        /* aside overlay */
+        
+
     }
 
+
+    &:not(.is-shrink){
+        & + .aside-overlay{
+            
+            @media screen and (max-width:767px){
+                background-color: rgba(255,255,255,0.5);
+                display: block;
+            }
+        }
+    }
 
     #cc-mainAside-toggler{
         transform: rotate(0);
@@ -138,6 +153,7 @@ a{
        
     }
 }
+
 
 
 /* main content */

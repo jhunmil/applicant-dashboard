@@ -1,9 +1,9 @@
 const mainSidebarToggle = () => {
-    const sidebarToggler = document.querySelector("#cc-mainAside-toggler");
-    const mainSidebarSection = document.querySelector("#cc-mainAside");
-    const mainConten = document.getElementById('cc-mainContent');
+  let sidebarToggler = document.querySelector("#cc-mainAside-toggler");
+  let mainSidebarSection = document.querySelector("#cc-mainAside");
+  let mainConten = document.getElementById('cc-mainContent');
 
-    const toggleMenu = () => {
+  let toggleMenu = () => {
         mainSidebarSection.classList.toggle("is-shrink");
         sidebarToggler.classList.toggle("is-shrink");
         mainConten.classList.toggle("is-shrink");
@@ -13,30 +13,53 @@ const mainSidebarToggle = () => {
 }
 
 const mainSidebarmToggle = () => {
-  const sidebarToggler = document.querySelector("#cc-mainAside-mtoggler");
-  const mainSidebarSection = document.querySelector("#cc-mainAside");
-  const mainConten = document.getElementById('cc-mainContent');
+  let sidebarToggler = document.querySelector("#cc-mainAside-mtoggler");
+  let mainSidebarSection = document.querySelector("#cc-mainAside");
+  let mainConten = document.getElementById('cc-mainContent');
+
   
-  const toggleMenu = () => {
+  let toggleMenu = () => {
       mainSidebarSection.classList.toggle("is-shrink");
       sidebarToggler.classList.toggle("is-shrink");
       mainConten.classList.toggle("is-shrink");
     
+    //  sizeMenuOverlay.classList.toggle("hidden");
 
-      const navIcon = sidebarToggler.getElementsByClassName('las');
+    let navIcon = sidebarToggler.getElementsByClassName('las');
   
       Array.from(navIcon).forEach(targetElement => {
        // targetElement.classList.toggle("la-times");
       });
 
   }
-  
+
+
+ 
   sidebarToggler.addEventListener('click', toggleMenu)
 }
+
+const asideOverlayToggle = () => {
+  let sidebarToggler = document.querySelector("#cc-mainAside-mtoggler");
+  let mainSidebarSection = document.querySelector("#cc-mainAside");
+  let mainConten = document.getElementById('cc-mainContent');
+  let asideOverlay = document.querySelector('.aside-overlay');
+  
+  let toggleMenu = () => {
+      mainSidebarSection.classList.add("is-shrink");
+      sidebarToggler.classList.add("is-shrink");
+      mainConten.classList.add("is-shrink");
+  }
+
+
+ 
+  asideOverlay.addEventListener('click', toggleMenu)
+}
+
 
 const initApp = () => {
     mainSidebarToggle();
     mainSidebarmToggle();
+    asideOverlayToggle();
 };
   
   document.addEventListener("DOMContentLoaded", initApp);
@@ -76,9 +99,7 @@ const initApp = () => {
         mainSidebarSection.classList.add('is-shrink');
         mainConten.classList.add("is-shrink");
 
-        window.addEventListener("click", (event) => {
-          console.log('as12');
-        })
+       
        
 
     } 

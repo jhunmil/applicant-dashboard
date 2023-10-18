@@ -75,7 +75,7 @@ a{
     
     box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
     @media screen and (max-width:767px){
-        width: 250px; 
+        width: 270px; 
        
     }
     &.is-shrink{

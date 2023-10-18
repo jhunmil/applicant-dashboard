@@ -72,9 +72,15 @@ const initApp = () => {
    if (isMobileOrTablet()) {
  
     if (window.innerWidth < 768) {
-      sidebarToggler.classList.add('is-shrink');
-      mainSidebarSection.classList.add('is-shrink');
-      mainConten.classList.add("is-shrink");
+        sidebarToggler.classList.add('is-shrink');
+        mainSidebarSection.classList.add('is-shrink');
+        mainConten.classList.add("is-shrink");
+
+        window.addEventListener("click", (event) => {
+          console.log('as12');
+        })
+       
+
     } 
    } else {
      if (window.innerWidth < 768) {
@@ -86,4 +92,5 @@ const initApp = () => {
  
     
   });
- 
+
+  

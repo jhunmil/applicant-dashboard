@@ -199,12 +199,20 @@ New application styles */
 }
 
 
+/* css for textarea for messageseditor */
+.cc-message-editor{
+    &.disabled{
+        height: 50px;
+        @apply bg-neutral-100;
+    }
+}
 
 
 
-
-
-
+/* reverse icon */
+.cc-reverse-icon{
+    transform: scaleX(-1);
+}
 
 
 /* components */
@@ -234,7 +242,7 @@ New application styles */
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 6px;
 }
  
 /* Track */
@@ -244,13 +252,13 @@ New application styles */
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: #aaa;
     border-radius: 5px;
 }
  
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: #777;
 }
 .aside-wrapper{
     max-height: calc(100vh - 100px);
